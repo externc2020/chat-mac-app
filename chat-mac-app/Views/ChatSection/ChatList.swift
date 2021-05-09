@@ -11,9 +11,11 @@ struct ChatList: View {
     var dataSource: [Chat]
     
     var body: some View {
-        VStack(alignment: .leading) {
-            ForEach(dataSource, id: \.self) { item in
-                ChatItem(dataSource: item)
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(dataSource, id: \.self) { item in
+                    ChatItem(dataSource: item)
+                }
             }
         }
     }

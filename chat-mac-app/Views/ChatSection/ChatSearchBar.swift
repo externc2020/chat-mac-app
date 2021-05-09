@@ -18,19 +18,23 @@ struct ChatSearchBar: View {
     var body: some View {
         GeometryReader { geometry in
             HStack() {
-                TextEditor(text: $keyword)
-                    .foregroundColor(Color.gray)
-                    .font(.custom("HelveticaNeue", size: 13))
+                TextField(
+                    "Given Name",
+                    text: $keyword)
+                    .disableAutocorrection(true)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height)
                 
-                Button(action: { }, label: {
-                    Text("button")
+                Button(action: {
+                    print("Search chat room")
+                }, label: {
+                    Text("Search")
                 })
-                .frame(width: 90, height: geometry.size.height)
-                .background(Color.yellow)
+                .buttonStyle(BorderedButtonStyle())
+//                .frame(width: geometry.size.width * 0.2, height: geometry.size.height)
                 
             }
         }
-        .frame(height: 50)
         .background(Color.white)
     }
 
