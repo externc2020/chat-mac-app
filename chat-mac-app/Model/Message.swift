@@ -15,18 +15,8 @@ struct Message: Identifiable {
 }
 
 let defaultMessges = [
-    Message(id: 1,content: "hello justin"),
+    Message(id: 1,content: "hello justin, hello fasdfasfasdfasf"),
     Message(id: 2,content: "hello justin"),
-    Message(id: 3,content: "hello justin"),
-    Message(id: 4,content: "hello justin"),
-]
-
-let stirngList = [
-    "hello justin",
-    "hello justin",
-    "hello justin",
-    "hello justin",
-    "hello justin",
-    "hello justin",
-    "hello justin",
+    Message(id: 3,content: "hello justin,dsfasdfasd"),
+    Message(id: 4,content: "hello justin 12312sada"),
 ]
